@@ -7,6 +7,8 @@
 *********************************************************************/
 
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 
 #define MAXSIZE 20	//	最大顶点数目
 #define INF 65535	//	不可达标志
@@ -102,37 +104,35 @@ int getVertexNo(MGraph G, char info)
 *********************************************************************/
 bool CreateGraph(MGraph &G)
 {
-//	InitGraph(G);	//	初始化图
+	cout << "输入定点数目" << endl;
+	cin >> G.vertexNum;
 
-	printf("请输入顶点数目\n");
-//	scanf("%d", &G.vertexNum);
+	cout << "请输入顶点信息" << endl;
+	for (int i = 0; i < G.vertexNum; i++)
+	{
+		cin >> G.v[i].info;
+	}
 
-//	printf("请输入顶点信息\n");
-//	for (int i = 0; i < G.vertexNum; i++)
-//	{
-//		scanf("%c", &G.v[i].info);
-//	}
-//
-//	printf("请输入边的数目\n");
-//	scanf("%d\n", &G.edgeNum);
-//
-//	for (int i = 0; i < G.edgeNum; i++)
-//	{
-//		printf("请输入起点，终点和边权值\n");
-//		
-//		char start, end;
-//		int weight;
-//		scanf("%c%c%d", &start, &end, &weight);
-//
-//		//	获取顶点序号
-//		int startNo = -1;
-//		int endNo = -1;
-//
-//		startNo = getVertexNo(G, start);
-//		endNo = getVertexNo(G, end);
-//
-//		G.e[startNo][endNo].weight = weight;
-//	}
+	cout << "请输入边的数目" << endl;
+	cin >> G.edgeNum;
+
+	for (int i = 0; i < G.edgeNum; i++)
+	{
+		cout << "请输入起点，终点和边权值" << endl;
+		
+		char start, end;
+		int weight;
+		cin >> start >> end >> weight;
+
+		//	获取顶点序号
+		int startNo = -1;
+		int endNo = -1;
+
+		startNo = getVertexNo(G, start);
+		endNo = getVertexNo(G, end);
+
+		G.e[startNo][endNo].weight = weight;
+	}
 
 	return true;
 }
@@ -169,9 +169,10 @@ bool PrintGraph(MGraph G)
 bool OperationTest()
 {
 	MGraph G;
-
+	
+	InitGraph(G);
 	CreateGraph(G);
-//	PrintGraph(G);
+	PrintGraph(G);
 
 	return true;
 }
@@ -186,13 +187,8 @@ bool OperationTest()
 *********************************************************************/
 int main()
 {
-	printf("hello world\n");
-	
-	printf("请输入顶点数目\n");
-	
-	int a = 0;
-	scanf("%d", &a);
-//	OperationTest();
+	OperationTest();
 	
 	return true;
 }
+
