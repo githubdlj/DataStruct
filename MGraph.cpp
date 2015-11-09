@@ -5,7 +5,6 @@
 	
 	Purpose:  图的顺序存储实现
 *********************************************************************/
-
 #include <stdio.h>
 #include <iostream>
 using namespace std;
@@ -87,7 +86,7 @@ bool InitGraph(MGraph &G)
             G.e[i][j].weight = INF;
             G.e[j][i].weight = INF;
 		}
-        G.e[i][i] = 0;
+        G.e[i][i].weight = 0;
 	}
 	return true;
 }
@@ -193,7 +192,7 @@ bool DFS(MGraph G, int v)
     for (int adjvex = 0; adjvex < G.vertexNum; adjvex++)
     {
         //  寻找到邻接点，并且邻接点没有被访问，则访问
-        if ( 0 != G.e[v][adjvex] && INF != G.e[v][adjvex] && !isVisited(adjvex))
+        if ( 0 != G.e[v][adjvex].weight && INF != G.e[v][adjvex].weight && !isVisited[adjvex])
         {
             DFS(G, adjvex);
         }
@@ -240,7 +239,7 @@ bool BFS(MGraph G, int v)
 
     queue[rear++] = v;    //  顶点入队列
    
-    visit(G.vArr[v]);   //  访问，标记
+    visit(G.v[v]);   //  访问，标记
     isVisited[v] = 1;
     
     while (front != rear)   //  队列不空
@@ -250,10 +249,10 @@ bool BFS(MGraph G, int v)
         for (int adjvex = 0; adjvex < G.vertexNum; adjvex++)
         {
             //  寻找没有被访问过的邻接点
-            if (INF != G.e[v][adjvex] && 0 != G.e[v][adjvex] && !isVisited[adjvex])
+            if (INF != G.e[v][adjvex].weight && 0 != G.e[v][adjvex].weight && !isVisited[adjvex])
             {
                 queue[rear++] = adjvex; //  入队，访问，标记
-                visit(G.vArr[adjvex]);  
+                visit(G.v[adjvex]);  
                 isVisited[adjvex] = 1;
             }
         }
@@ -275,6 +274,8 @@ bool BFSTraverse(MGraph G)
             BFS(G, vertexNo);
         }
     }
+    
+    return true;
 }
 /********************************************************************
 	Method:    OperationTest
