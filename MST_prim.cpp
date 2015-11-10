@@ -5,10 +5,6 @@
 	
 	Purpose:  最小生成树
 *********************************************************************/
-#include <iostream>
-#include <stdio.h>
-using namespace std;
-
 #define INF     65536
 #define MAXSIZE 20
 
