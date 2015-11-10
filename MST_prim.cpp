@@ -35,6 +35,7 @@ typedef struct
 
 //  closedge[j].adjvex=k，表明边(vj, vk)是V-U中顶点vj到U中权值最小的边. closedge[j].lowcost存放该边的权值。
 //  closedge[j].lowcost = 0表示将j加入到顶点集合U
+//  这里closedge[j].lowcost起到了两个作用，当然，可以另外设置一个辅助数组vSet[MAXSIZE]存储顶点集合U
 typedef struct  
 {
     int adjvex;     
