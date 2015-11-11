@@ -3,7 +3,9 @@
 	Filename: ShortestPath_dijkstra
 	Author:	  dinglj
 	
-	Purpose:  
+	Purpose:  单源最短路径，有向网
+              邻接矩阵实现
+              时间复杂度 O(n ^ 2)
 *********************************************************************/
 #define INF     65536
 #define MAXSIZE 20

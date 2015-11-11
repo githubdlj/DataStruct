@@ -3,7 +3,8 @@
 	Filename: ShortestPath_floyd
 	Author:	  dinglj
 	
-	Purpose:  
+	Purpose:  顶点对最短路径，有向网
+              时间复杂度 O(n ^ 3)
 *********************************************************************/
 #define INF     65536
 #define MAXSIZE 20

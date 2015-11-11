@@ -3,7 +3,9 @@
 	Filename: MST_kruskal
 	Author:	  dinglj
 	
-	Purpose:  最小生成树,kruskal
+	Purpose:  最小生成树,kruskal，无向网
+              邻接矩阵实现
+              时间复杂度：邻接矩阵， 邻接表O(n ^ 2) + O(eloge), 所以适合稀疏图
 *********************************************************************/
 #define INF     65536
 #define MAXSIZE 20
@@ -37,8 +39,8 @@ typedef struct
 	Parameter: 
 	Returns:   
 
-	Purpose:   采用邻接矩阵更方便，邻接表效率可能更高
-
+	Purpose:   采用邻接矩阵更方便，邻接表效率更高
+               
 *********************************************************************/
 typedef struct  
 {

@@ -3,7 +3,9 @@
 	Filename: MST_prim
 	Author:	  dinglj
 	
-	Purpose:  最小生成树
+	Purpose:  最小生成树，无向网
+              邻接矩阵实现
+              复杂度：邻接矩阵O(n ^ 2), 邻接表O(n ^ 2)
 *********************************************************************/
 #define INF     65536
 #define MAXSIZE 20

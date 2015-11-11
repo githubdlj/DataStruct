@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\线性表">
+      <UniqueIdentifier>{3844e4cf-54ce-4995-a559-67095bd20246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\线性表\顺序表">
+      <UniqueIdentifier>{855024e0-36ff-4922-9791-9dd225063779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\线性表\链表">
+      <UniqueIdentifier>{00fd6bdb-3266-4285-88ad-868f2481dd75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\线性表\栈">
+      <UniqueIdentifier>{50f0f179-127f-4284-b090-891000bd2333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\线性表\队列">
+      <UniqueIdentifier>{1b7e254e-dee4-45e7-a525-5372438fe87a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\树">
+      <UniqueIdentifier>{267b6663-bf23-49b3-b53d-38c3b81cb4ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\树\二叉树">
+      <UniqueIdentifier>{f5226789-3702-42f2-bfd7-73ddd446b374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\图">
+      <UniqueIdentifier>{53e2958a-d1b3-489f-a26d-f7cd478640f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\图\图基本算法">
+      <UniqueIdentifier>{b37373bd-5d13-4e61-b83f-9ba9ad45d4b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\图\图算法">
+      <UniqueIdentifier>{3ae18b1d-7097-43e7-a60c-ceab1a1dc5e6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SqList.cpp">
+      <Filter>源文件\线性表\顺序表</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkList.cpp">
+      <Filter>源文件\线性表\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="CLinkList.cpp">
+      <Filter>源文件\线性表\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="SqStack.cpp">
+      <Filter>源文件\线性表\栈</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkQueue.cpp">
+      <Filter>源文件\线性表\队列</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkStack.cpp">
+      <Filter>源文件\线性表\栈</Filter>
+    </ClCompile>
+    <ClCompile Include="SqQueue.cpp">
+      <Filter>源文件\线性表\队列</Filter>
+    </ClCompile>
+    <ClCompile Include="BiTree.cpp">
+      <Filter>源文件\树\二叉树</Filter>
+    </ClCompile>
+    <ClCompile Include="BSTree.cpp">
+      <Filter>源文件\树\二叉树</Filter>
+    </ClCompile>
+    <ClCompile Include="SqTree.cpp">
+      <Filter>源文件\树\二叉树</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkList_Recursion.cpp">
+      <Filter>源文件\线性表\链表</Filter>
+    </ClCompile>
+    <ClCompile Include="MGraph.cpp">
+      <Filter>源文件\图\图基本算法</Filter>
+    </ClCompile>
+    <ClCompile Include="MST_prim.cpp">
+      <Filter>源文件\图\图算法</Filter>
+    </ClCompile>
+    <ClCompile Include="AGraph.cpp">
+      <Filter>源文件\图\图基本算法</Filter>
+    </ClCompile>
+    <ClCompile Include="MST_kruskal.cpp">
+      <Filter>源文件\图\图算法</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
