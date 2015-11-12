@@ -6,13 +6,7 @@
 	Purpose:  冒泡排序
 *********************************************************************/
 #include <stdio.h>
-//  swap
-void swap(int &a, int &b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
-}
+#include "sort.h"
 
 /********************************************************************
 	Method:    bubbleSort
@@ -94,20 +88,11 @@ void OperationTest_1()
 	Purpose:   对单链表进行冒泡排序,从小到大
 
 *********************************************************************/
-//  单链表结构
-typedef struct Node
-{
-    int data;
-    struct Node *next;
-}Node;
 
-typedef Node * LinkList;
-
-//////////////////////////////////////////////////////////////////////
 //  实际上是头部排序，将结果保存到头部，类似于bubble_sort3
 void bubbleSort_LinkList(LinkList &L)
 {
-    for (Node *pOuterLoop = L->next; NULL != pOuterLoop->next; pOuterLoop = pOuterLoop->next)
+    for (Node *pOuterLoop = L->next; NULL != pOuterLoop; pOuterLoop = pOuterLoop->next)
     {
         Node *pInnerLoop = pOuterLoop;
         for (; NULL != pInnerLoop->next; pInnerLoop = pInnerLoop->next)
