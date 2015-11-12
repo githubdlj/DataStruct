@@ -78,7 +78,7 @@ void MST_prim(MGraph G, int v)
     {
         int minValue = INF;
         int minIndex = 0;
-        //  从集合V - U中找到closedge[vertexNo].lowcost最小的值
+        //  从集合V - U 中找到closedge[vertexNo].lowcost最小的值
         for (int vertexNo = 0; vertexNo < G.vertexNum; ++vertexNo)
         {
             if (0 != closedge[vertexNo].lowcost && closedge[vertexNo].lowcost < minValue)
@@ -94,10 +94,13 @@ void MST_prim(MGraph G, int v)
         mstedge[index].vex2 = minIndex;
         mstedge[index].weight = closedge[minIndex].lowcost;
 
-        //  更新closedge[index]
+        //  将顶点加入到集合U
+        closedge[minIndex].lowcost = 0;
+
+        //  更新V - U 集合中的closedge
         for (int vertexNo = 0; vertexNo < G.vertexNum; ++vertexNo)
         {
-            if (G.e[minIndex][vertexNo].weight < closedge[vertexNo].lowcost)
+            if (0 != closedge[vertexNo].lowcost && G.e[minIndex][vertexNo].weight < closedge[vertexNo].lowcost)
             {
                 closedge[vertexNo].lowcost = G.e[minIndex][vertexNo].weight;
                 closedge[vertexNo].adjvex = minIndex;
