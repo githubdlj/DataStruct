@@ -5,12 +5,18 @@
 	
 	Purpose:  包含排序的一些初始数据，以及链表结构
 *********************************************************************/
+#include <stdio.h>
 #include <stdlib.h>
 
 //////////////////////////////////////////////////////////////////////
 //  全局数组
 #define SIZE 10
-const int arr[SIZE] = {3,4,4,1,2,6,5,2,3,0};
+int randomArr[SIZE] = {3,4,4,1,2,6,5,2,3,0};
+int orderedArr[SIZE] = {0,1,2,2,3,3,4,4,5,6};
+int orderedArr_reverse[SIZE] = {6,5,4,4,3,3,2,2,1,0};
+
+//  还需测试数组为空，数组仅有一个元素的情况  
+
 //////////////////////////////////////////////////////////////////////
 //  单链表结构
 typedef struct Node
@@ -69,6 +75,7 @@ void PrintList(LinkList L)
     while (pNodeIndex)
     {
         printf("%d\t", pNodeIndex->data);
+        pNodeIndex = pNodeIndex->next;
     }
     printf("\n");
 }
@@ -87,4 +94,15 @@ void swap(int &a, int &b)
     int temp = a;
     a = b;
     b = temp;
+}
+
+//////////////////////////////////////////////////////////////////////
+//  输出数组内容
+void PrintArr(int arr[], int n)
+{
+    for (int i = 0; i < n; ++i)
+    {
+        printf("%d\t", arr[i]);
+    }
+    printf("\n");
 }
