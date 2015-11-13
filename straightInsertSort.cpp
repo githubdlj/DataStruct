@@ -63,13 +63,13 @@ void straightInsertSort(int arr[], int n)
 void straightInsertSort_LinkList(LinkList &L)
 {
     Node *pOrdered = L;
-    Node *pUnOrderedNode = pOrdered->next;     //  第一个节点开始无序
+    Node *pUnOrdered = pOrdered->next;     //  第一个节点开始无序
     pOrdered->next = NULL;      //  初始化有序链表为空
 
-    while (pUnOrderedNode)      //  将无序链表插入到有序链表
+    while (pUnOrdered)      //  将无序链表插入到有序链表
     {
-        Node *pInsertNode = pUnOrderedNode;  //  待插入节点为无序表第一个节点
-        pUnOrderedNode = pInsertNode->next;
+        Node *pInsertNode = pUnOrdered;  //  待插入节点为无序表第一个节点
+        pUnOrdered = pInsertNode->next;
 
         Node *pLocation = L;     //  插入位置
         Node *pLocationNext = pLocation->next;
